@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preview an individual vehicle detail page on CarHouse.">
+    <title>CarHouse - Vehicle Details</title>
+    <link rel="shortcut icon" href="../assets/img/logo/icon-shortcut.png">
+    <script src="https://kit.fontawesome.com/de0eb60c48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../build/css/style.css">
+</head>
+<body>
+    <header>
+        <section class="navbar">
+            <div class="container-1600">
+                <div>
+                    <a class="logo" href="../index.html"><img src="../assets/img/logo/carhouse-logo.png" alt="CarHouse logo"></a>
+                    <button id="hamburguer" class="hamburguer"><i class="fas fa-bars"></i></button>
+                </div>
+                <nav id="main-nav" class="main-nav">
+                    <ul>
+                        <li><a class="nav-link" href="../pages/buy.html">Buy</a></li>
+                        <li><a class="nav-link" href="../pages/sell.html">Sell</a></li>
+                        <li><a class="nav-link" href="../pages/dealerships.html">Dealerships</a></li>
+                        <li><a class="nav-link" href="../pages/login.html">Log In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <main class="page-shell page-shell-wide" data-vehicle-root>
+        <section class="page-hero">
+            <h1 id="vehicle-title">Vehicle Title</h1>
+            <p id="vehicle-hero-copy">Vehicle overview goes here.</p>
+        </section>
+        <section class="vehicle-detail-layout page-section">
+            <div class="vehicle-media-panel">
+                <img id="vehicle-main-image" class="vehicle-main-image" src="../assets/img/images/buy-home/vw-golf-hatchback.webp" alt="Vehicle image">
+                <div id="vehicle-thumbnails" class="vehicle-thumbnail-row"></div>
+            </div>
+            <div class="vehicle-side-panel">
+                <article class="vehicle-overview-card">
+                    <div class="vehicle-price-row">
+                        <div>
+                            <p class="vehicle-price-label">Asking Price</p>
+                            <h2 id="vehicle-price">R 0</h2>
+                        </div>
+                        <span id="vehicle-age" class="listing-age">Added recently</span>
+                    </div>
+                    <div class="vehicle-meta-list">
+                        <span id="vehicle-location">Johannesburg</span>
+                        <span id="vehicle-overview-body">SUV</span>
+                        <span id="vehicle-overview-year">2023</span>
+                    </div>
+                    <div class="vehicle-spec-grid">
+                        <article>
+                            <span>Transmission</span>
+                            <strong id="vehicle-overview-transmission">Automatic</strong>
+                        </article>
+                        <article>
+                            <span>Fuel</span>
+                            <strong id="vehicle-overview-fuel">Petrol</strong>
+                        </article>
+                        <article>
+                            <span>Mileage</span>
+                            <strong id="vehicle-overview-mileage">0 km</strong>
+                        </article>
+                        <article>
+                            <span>Seller</span>
+                            <strong id="vehicle-overview-seller">Dealer</strong>
+                        </article>
+                    </div>
+                    <div class="cta-row vehicle-cta-row">
+                        <a id="vehicle-email-link" class="page-button success" href="mailto:info@CarHouse.com">Enquire by Email</a>
+                        <a id="vehicle-call-link" class="page-button alt" href="tel:0000000000">Call Seller</a>
+                        <button id="vehicle-save-button" class="page-button" type="button">Save to Profile</button>
+                        <a id="vehicle-viewing-link" class="page-button" href="#vehicle-viewing-form-section">Book a Viewing</a>
+                    </div>
+                </article>
+                <article class="info-card dealer-contact-card">
+                    <h3 id="vehicle-dealer-name">Dealer Name</h3>
+                    <p id="vehicle-dealer-copy">Dealer support copy goes here.</p>
+                </article>
+            </div>
+        </section>
+        <section class="vehicle-lower-grid page-section">
+            <article class="info-card">
+                <h2>Vehicle Overview</h2>
+                <p id="vehicle-description">Vehicle description goes here.</p>
+                <div id="vehicle-features" class="tag-list"></div>
+            </article>
+            <article class="info-card">
+                <h2>Why This Listing Stands Out</h2>
+                <ul class="vehicle-highlight-list">
+                    <li>Clear pricing and key facts above the fold</li>
+                    <li>Direct contact actions for quick follow-up</li>
+                    <li>Save-to-profile support for return visits</li>
+                    <li>Structured specs for easier side-by-side comparison</li>
+                </ul>
+            </article>
+        </section>
+        <section id="vehicle-viewing-form-section" class="page-section">
+            <article class="info-card booking-panel">
+                <div class="booking-panel-head">
+                    <div>
+                        <p class="section-kicker">Book a Viewing</p>
+                        <h2>Choose a time that works for you</h2>
+                    </div>
+                    <p id="viewing-form-copy">Share your details, choose a date, and the seller can review the appointment request.</p>
+                </div>
+                <form id="vehicle-viewing-form" class="booking-form" data-form-type="viewing" novalidate>
+                    <div class="booking-form-grid">
+                        <label class="booking-field" for="viewing-name">
+                            <span>Your Name</span>
+                            <input id="viewing-name" name="visitor_name" type="text" placeholder="Enter your full name" autocomplete="name" required>
+                        </label>
+                        <label class="booking-field" for="viewing-email">
+                            <span>Email Address</span>
+                            <input id="viewing-email" name="visitor_email" type="email" placeholder="Enter your email address" autocomplete="email" required>
+                        </label>
+                        <label class="booking-field" for="viewing-phone">
+                            <span>Phone Number</span>
+                            <input id="viewing-phone" name="visitor_phone" type="tel" placeholder="Enter your phone number" autocomplete="tel" required>
+                        </label>
+                        <label class="booking-field" for="viewing-date">
+                            <span>Preferred Date</span>
+                            <input id="viewing-date" name="preferred_date" type="date" required>
+                        </label>
+                        <label class="booking-field" for="viewing-time">
+                            <span>Preferred Time</span>
+                            <input id="viewing-time" name="preferred_time" type="time" required>
+                        </label>
+                        <label class="booking-field booking-field-wide" for="viewing-message">
+                            <span>Message for the Seller</span>
+                            <textarea id="viewing-message" name="message" cols="30" rows="5" placeholder="Add a short note, such as the day that suits you best or anything you want to ask before visiting."></textarea>
+                        </label>
+                    </div>
+                    <input id="viewing-vehicle-id" name="vehicle_id" type="hidden">
+                    <div id="viewing-feedback" class="form-feedback is-hidden" role="status" aria-live="polite"></div>
+                    <div class="cta-row booking-actions">
+                        <button class="page-button success" type="submit">Send Viewing Request</button>
+                        <a id="vehicle-viewing-mail-link" class="page-button alt" href="mailto:info@CarHouse.com">Email Seller Instead</a>
+                    </div>
+                </form>
+            </article>
+        </section>
+        <section class="page-section">
+            <div class="marketplace-results-head">
+                <div>
+                    <h2>Similar Cars You May Like</h2>
+                    <p>Explore a few related listings from the current marketplace sample.</p>
+                </div>
+                <a class="page-button alt" href="./catalog.html">Back to Catalog</a>
+            </div>
+            <div id="related-vehicles" class="listing-grid"></div>
+        </section>
+    </main>
+    <footer class="footer">
+        <hr>
+        <h3>&copy; 2022 CarHouse, Inc.</h3>
+        <h6>Developed by Simphiwe Mtshali</h6>
+    </footer>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/forms.js"></script>
+    <script src="../assets/js/marketplace.js"></script>
+    <script src="../assets/js/vehicle-page.js"></script>
+</body>
+</html>

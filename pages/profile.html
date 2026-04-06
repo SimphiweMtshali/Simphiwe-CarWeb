@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preview the future CarHouse profile dashboard for saved vehicles, listings, and account activity.">
+    <title>CarHouse - Profile</title>
+    <link rel="shortcut icon" href="../assets/img/logo/icon-shortcut.png">
+    <script src="https://kit.fontawesome.com/de0eb60c48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../build/css/style.css">
+</head>
+<body>
+    <header>
+        <section class="navbar">
+            <div class="container-1600">
+                <div>
+                    <a class="logo" href="../index.html"><img src="../assets/img/logo/carhouse-logo.png" alt="CarHouse logo"></a>
+                    <button id="hamburguer" class="hamburguer"><i class="fas fa-bars"></i></button>
+                </div>
+                <nav id="main-nav" class="main-nav">
+                    <ul>
+                        <li><a class="nav-link" href="../pages/buy.html">Buy</a></li>
+                        <li><a class="nav-link" href="../pages/sell.html">Sell</a></li>
+                        <li><a class="nav-link" href="../pages/dealerships.html">Dealerships</a></li>
+                        <li><a class="nav-link" href="../pages/login.html">Log In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <main class="page-shell page-shell-wide">
+        <section class="page-hero page-hero-soft">
+            <h1>Your CarHouse Dashboard</h1>
+            <p>Track your saved vehicles, active listings, messages, and dealership interactions from a single account view.</p>
+            <div class="tag-list">
+                <span id="saved-badge" class="tag-pill">0 saved cars</span>
+                <span class="tag-pill">Marketplace preview</span>
+                <span class="tag-pill">Buyer dashboard</span>
+            </div>
+        </section>
+        <section class="dashboard-grid">
+            <article class="info-card">
+                <h3>Saved Vehicles</h3>
+                <p><strong id="saved-count">0</strong> cars saved so far. Keep vehicles here while you compare options and decide what to contact next.</p>
+            </article>
+            <article class="info-card">
+                <h3>My Listings</h3>
+                <p>Monitor performance, edit listing details, and update pricing or images when your vehicle status changes.</p>
+            </article>
+            <article class="info-card">
+                <h3>Dealer Messages</h3>
+                <p>Keep your dealer conversations organized so you can compare offers and follow up without losing context.</p>
+            </article>
+            <article class="info-card">
+                <h3>Purchase Activity</h3>
+                <p>Review past inquiries, offers, and completed purchases once account functionality is connected.</p>
+            </article>
+        </section>
+        <section class="page-section">
+            <div class="marketplace-results-head">
+                <div>
+                    <h2>Saved Cars</h2>
+                    <p>Your favorite listings are stored in this browser for now, so you can come back and pick up where you left off.</p>
+                </div>
+                <a class="page-button alt" href="./catalog.html">Browse More Cars</a>
+            </div>
+            <div id="saved-vehicles" class="listing-grid"></div>
+            <div id="saved-empty" class="empty-state">
+                <h3>No saved cars yet.</h3>
+                <p>Head into the catalog, save a few listings, and they will show up here automatically.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <hr>
+        <h3>&copy; 2022 CarHouse, Inc.</h3>
+        <h6>Developed by Simphiwe Mtshali</h6>
+    </footer>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/marketplace.js"></script>
+    <script src="../assets/js/profile-page.js"></script>
+</body>
+</html>

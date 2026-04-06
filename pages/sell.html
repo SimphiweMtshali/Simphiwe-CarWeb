@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A site where you can sell your car or find the car you are looking for, whether it's used or new. You can find a wide variety of dealerships listed on the site. If you own a dealership, you can contact us to have it listed on this site.">
     <meta name="keywords" content="car, cars, buy, purchasing, sale, selling, dealership, new">
-    <title>CarHouse - sell</title>
+    <title>CarHouse - Sell</title>
     <link rel="shortcut icon" href="../assets/img/logo/icon-shortcut.png">
 
     <script src="https://kit.fontawesome.com/de0eb60c48.js" crossorigin="anonymous"></script>
@@ -34,10 +34,10 @@
                             <a class="nav-link" href="../pages/sell.html">Sell</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="">Dealerships</a>
+                            <a class="nav-link" href="../pages/dealerships.html">Dealerships</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="">Log In</a>
+                            <a class="nav-link" href="../pages/login.html">Log In</a>
                         </li>
                     </ul>
                 </nav>
@@ -45,26 +45,26 @@
         </section>
         <section class="sell-banner">
             <div class="gradient-div"></div>
-            <h1>sell Your Car Quickly and <br><b>Securely</b></h1>
+            <h1>Sell Your Car Quickly and <br><b>Securely</b></h1>
         </section>
     </header>
 
     <main class="main-sell">
-        <form class="form-sell">
+        <form class="form-sell" action="../pages/listing-success.html" data-form-type="sell" novalidate>
             <section class="brand-section"> <!-- Brand, Model, and Year -->
                 <div>
                     <h2>1. Indicate the Brand, Model, and Year of the Vehicle</h2>
                     <div class="sign-up-field">
                         <h3>Brand</h3>
-                        <input type="text" name="brand" placeholder="What is the brand of your vehicle?" autocomplete="off" required>
+                        <input type="text" name="brand" placeholder="What is the brand of your vehicle?" autocomplete="off" minlength="2" required>
                     </div>
                     <div class="sign-up-field">
                         <h3>Model</h3>
-                        <input type="text" name="model" placeholder="What is the model of your vehicle?" autocomplete="off" required>
+                        <input type="text" name="model" placeholder="What is the model of your vehicle?" autocomplete="off" minlength="2" required>
                     </div>
                     <div class="sign-up-field">
                         <h3>Year</h3>
-                        <input type="number" name="year" placeholder="What is the year of your vehicle?" min="1960" max="2022" required>
+                        <input type="number" name="year" placeholder="What is the year of your vehicle?" min="1960" max="2030" required>
                     </div>
                     <img class="logo-ch-sell" src="../assets/img/logo/carhouse-logo.png" alt="CarHouse logo">
                 </div>
@@ -75,20 +75,20 @@
                     <h2>2. Indicate the Category, Color, and Provide a Description of the Vehicle</h2>
                     <div class="sign-up-field">
                         <h3>Category</h3>
-                        <select name="cat" id="">
+                        <select name="category" required>
                             <option value="" selected disabled>Select a Category</option>
-                            <option value="">Cars and Trucks</option>
-                            <option value="">Motorcycles</option>
-                            <option value="">Trucks</option>
+                            <option value="cars">Cars</option>
+                            <option value="motorcycles">Motorcycles</option>
+                            <option value="trucks">Trucks</option>
                         </select>
                     </div>
                     <div class="sign-up-field">
                         <h3>Color</h3>
-                        <input type="text" name="color" placeholder="What color is your vehicle?" autocomplete="off" required>
+                        <input type="text" name="color" placeholder="What color is your vehicle?" autocomplete="off" minlength="2" required>
                     </div>
                     <div class="sign-up-field">
                         <h3>Description</h3>
-                        <textarea name="description" id="" cols="30" rows="10" placeholder="Write a description of your vehicle" minlength="25" maxlength="2500" required></textarea>
+                        <textarea name="description" cols="30" rows="10" placeholder="Write a description of your vehicle" minlength="40" maxlength="2500" required></textarea>
                     </div>
                     <img class="logo-ch-sell" src="../assets/img/logo/carhouse-logo.png" alt="CarHouse logo">
                 </div>
@@ -103,7 +103,7 @@
                     </div>
                     <div class="sign-up-field">
                         <h3>Engine</h3>
-                        <input type="text" name="motor" placeholder="What is the engine size of your vehicle?" autocomplete="off" required>
+                        <input type="text" name="motor" placeholder="What is the engine size of your vehicle?" autocomplete="off" minlength="2" required>
                     </div>
                     <img class="logo-ch-sell" src="../assets/img/logo/carhouse-logo.png" alt="CarHouse logo">
                 </div>
@@ -113,12 +113,15 @@
                 <div>
                     <h2>4. Upload Quality Photos of the Vehicle</h2>
                     <p>(Minimum 4 photos, one for each side of the vehicle)</p>
-                    <div class="upload-image-box">
-                        <input type="file" name="images" id="upload-image" accept="image/*" multiple>
-                        <label for="upload-image">
-                            <img src="../assets/img/icons/camara-fotografica.png" alt="Camera image">
-                            <p>Add Photos</p>
-                        </label>
+                    <div class="sign-up-field sign-up-field-upload">
+                        <div class="upload-image-box">
+                            <input type="file" name="images" id="upload-image" accept="image/*" multiple>
+                            <label for="upload-image">
+                                <img src="../assets/img/icons/camara-fotografica.png" alt="Camera image">
+                                <p>Add Photos</p>
+                            </label>
+                        </div>
+                        <p id="upload-image-count" class="field-hint upload-count">Add at least 4 clear photos so buyers can see the vehicle properly.</p>
                     </div>
                     <img class="logo-ch-sell" src="../assets/img/logo/carhouse-logo.png" alt="CarHouse logo">
                 </div>
@@ -130,12 +133,12 @@
                    
                     <div class="sign-up-field">
                         <h3>Locality</h3>
-                        <select name="localidad" id="">
+                        <select name="location" required>
                             <option value="" selected disabled>In which location is the vehicle?</option>
-                            <option value="">Durban</option>
-                            <option value="">Cape Town</option>
-                            <option value="">Joburg</option>
-                            <option value="">Pretoria</option>
+                            <option value="Durban">Durban</option>
+                            <option value="Cape Town">Cape Town</option>
+                            <option value="Johannesburg">Johannesburg</option>
+                            <option value="Pretoria">Pretoria</option>
                         </select>
                     </div>
                     <img class="logo-ch-sell" src="../assets/img/logo/carhouse-logo.png" alt="CarHouse logo">
@@ -147,7 +150,7 @@
                     <h2>6. Finish Listing</h2>
                     <div class="sign-up-field">
                         <h3>Owner's Name</h3>
-                        <input type="text" name="owner" placeholder="Who is the owner of the vehicle?" autocomplete="off" required>
+                        <input type="text" name="owner" placeholder="Who is the owner of the vehicle?" autocomplete="off" minlength="2" required>
                     </div>
                     <div class="sign-up-field">
                         <h3>Price</h3>
@@ -160,6 +163,7 @@
                 </div>
                 <img class="aside-img" src="../assets/img/images/sell/car-aside-5.webp" alt="car image">
             </section>
+            <div id="sell-feedback" class="form-feedback is-hidden" role="status" aria-live="polite"></div>
             <input class="btn-publish" type="submit" value="Finish Listing">
         </form>
     </main>
@@ -173,13 +177,13 @@
             <div class="social-media"> <!-- Footer Social Media -->
                 <ul>
                     <li> <!-- Instagram -->
-                        <a class="social-media-item" href="#" target="_blank"><img src="../assets/img/icons/instagram-oscuro.png" alt="Instagram icon" width="40" height="40"></a>
+                        <span class="social-media-item" aria-label="Instagram coming soon"><img src="../assets/img/icons/instagram-oscuro.png" alt="Instagram icon" width="40" height="40"></span>
                     </li>
                     <li> <!-- Facebook -->
-                        <a class="social-media-item" href="#" target="_blank"><img src="../assets/img/icons/facebook-oscuro.png" alt="Facebook icon" width="40" height="40"></a>
+                        <span class="social-media-item" aria-label="Facebook coming soon"><img src="../assets/img/icons/facebook-oscuro.png" alt="Facebook icon" width="40" height="40"></span>
                     </li>
                     <li> <!-- Whatsapp -->
-                        <a class="social-media-item" href="#" target="_blank"><img src="../assets/img/icons/whatsapp-oscuro.png" alt="Whatsapp icon" width="40" height="40"></a>
+                        <span class="social-media-item" aria-label="WhatsApp coming soon"><img src="../assets/img/icons/whatsapp-oscuro.png" alt="Whatsapp icon" width="40" height="40"></span>
                     </li>
                 </ul>
             </div>
@@ -197,17 +201,17 @@
             <section> <!-- About Us -->
                 <h4>About Us</h4>
                 <ul>
-                    <li><a href="">Register Your Dealership</a></li>
-                    <li><a href="#">Legal Information</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="../pages/register-dealership.html">Register Your Dealership</a></li>
+                    <li><a href="../pages/legal-information.html">Legal Information</a></li>
+                    <li><a href="../pages/privacy-policy.html">Privacy Policy</a></li>
                 </ul>
             </section>
 
             <section class="section-footer-contact"> <!-- Contact Us -->
                 <h4>Contact Us</h4>
                 <ul>
-                    <li><a href="#"><img class="mail-icon" src="../assets/img/icons/email.png" alt="Email icon" width="35" height="35"><span>info@CarHouse.com</span></a></li>
-                    <li><a href="#"><img class="phone-icon" src="../assets/img/icons/phone-call.png" alt="Phone icon" width="35" height="35"><span>0000 00 000</span></a></li>
+                    <li><a href="mailto:info@CarHouse.com"><img class="mail-icon" src="../assets/img/icons/email.png" alt="Email icon" width="35" height="35"><span>info@CarHouse.com</span></a></li>
+                    <li><a href="tel:000000000"><img class="phone-icon" src="../assets/img/icons/phone-call.png" alt="Phone icon" width="35" height="35"><span>0000 00 000</span></a></li>
                 </ul>
             </section>
         </div>
@@ -221,5 +225,6 @@
 
     <!-- My Javascript -->
     <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/forms.js"></script>
 </body>
 </html>

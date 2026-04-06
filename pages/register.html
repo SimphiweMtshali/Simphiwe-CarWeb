@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create a CarHouse account to save cars, manage your profile, and start your buying or selling journey.">
+    <title>CarHouse - Register</title>
+    <link rel="shortcut icon" href="../assets/img/logo/icon-shortcut.png">
+    <script src="https://kit.fontawesome.com/de0eb60c48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../build/css/style.css">
+</head>
+<body>
+    <header>
+        <section class="navbar">
+            <div class="container-1600">
+                <div>
+                    <a class="logo" href="../index.html"><img src="../assets/img/logo/carhouse-logo.png" alt="CarHouse logo"></a>
+                    <button id="hamburguer" class="hamburguer"><i class="fas fa-bars"></i></button>
+                </div>
+                <nav id="main-nav" class="main-nav">
+                    <ul>
+                        <li><a class="nav-link" href="../pages/buy.html">Buy</a></li>
+                        <li><a class="nav-link" href="../pages/sell.html">Sell</a></li>
+                        <li><a class="nav-link" href="../pages/dealerships.html">Dealerships</a></li>
+                        <li><a class="nav-link" href="../pages/login.html">Log In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <main class="page-shell page-shell-auth page-shell-auth-wide">
+        <section class="auth-card">
+            <h2>Create Your CarHouse Account</h2>
+            <p class="auth-copy">This is the normal customer registration page for buyers and sellers. It still works as a front-end preview for now, but you can already fill in your details, check the form, and move through the account flow like a real sign-up screen.</p>
+            <form class="auth-form auth-form-grid" action="./login.html" data-form-type="register" data-success-redirect="./login.html?registered=1" novalidate>
+                <div id="register-feedback" class="form-feedback is-hidden" role="status" aria-live="polite"></div>
+                <label class="auth-field" for="register-full-name">
+                    <span>Full Name</span>
+                    <input id="register-full-name" name="full_name" type="text" placeholder="Enter your full name" autocomplete="name" required>
+                </label>
+                <label class="auth-field" for="register-email">
+                    <span>Email Address</span>
+                    <input id="register-email" name="email" type="email" placeholder="Enter your email address" autocomplete="email" required>
+                </label>
+                <label class="auth-field" for="register-username">
+                    <span>Username</span>
+                    <input id="register-username" name="username" type="text" placeholder="Choose a username" autocomplete="username" required>
+                </label>
+                <label class="auth-field" for="register-phone">
+                    <span>Phone Number</span>
+                    <input id="register-phone" name="phone" type="tel" placeholder="Enter your phone number" autocomplete="tel" required>
+                </label>
+                <label class="auth-field auth-field-wide" for="register-account-type">
+                    <span>What Will You Use CarHouse For First?</span>
+                    <select id="register-account-type" name="account_type" required>
+                        <option value="" selected disabled>Select an account type</option>
+                        <option value="buyer">I want to browse and save cars</option>
+                        <option value="seller">I want to sell my own car</option>
+                        <option value="both">I want both buying and selling tools</option>
+                    </select>
+                </label>
+                <label class="auth-field" for="register-password">
+                    <span>Password</span>
+                    <input id="register-password" name="password" type="password" placeholder="Create a password" autocomplete="new-password" minlength="8" required>
+                </label>
+                <label class="auth-field" for="register-confirm-password">
+                    <span>Confirm Password</span>
+                    <input id="register-confirm-password" name="confirm_password" type="password" placeholder="Type your password again" autocomplete="new-password" minlength="8" required>
+                </label>
+                <label class="auth-check auth-field-wide" for="register-terms">
+                    <input id="register-terms" name="terms" type="checkbox" required>
+                    <span>I agree to the CarHouse terms and privacy preview while the real account system is still being built.</span>
+                </label>
+                <div class="cta-row auth-actions auth-field-wide">
+                    <button class="page-button alt auth-submit" type="submit">Create Account</button>
+                    <a class="page-button" href="./login.html">Back to Log In</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <hr>
+        <h3>&copy; 2022 CarHouse, Inc.</h3>
+        <h6>Developed by Simphiwe Mtshali</h6>
+    </footer>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/forms.js"></script>
+</body>
+</html>

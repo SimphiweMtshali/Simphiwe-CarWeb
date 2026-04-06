@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to CarHouse to manage saved cars, listings, and account activity.">
+    <title>CarHouse - Log In</title>
+    <link rel="shortcut icon" href="../assets/img/logo/icon-shortcut.png">
+    <script src="https://kit.fontawesome.com/de0eb60c48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../build/css/style.css">
+</head>
+<body>
+    <header>
+        <section class="navbar">
+            <div class="container-1600">
+                <div>
+                    <a class="logo" href="../index.html"><img src="../assets/img/logo/carhouse-logo.png" alt="CarHouse logo"></a>
+                    <button id="hamburguer" class="hamburguer"><i class="fas fa-bars"></i></button>
+                </div>
+                <nav id="main-nav" class="main-nav">
+                    <ul>
+                        <li><a class="nav-link" href="../pages/buy.html">Buy</a></li>
+                        <li><a class="nav-link" href="../pages/sell.html">Sell</a></li>
+                        <li><a class="nav-link" href="../pages/dealerships.html">Dealerships</a></li>
+                        <li><a class="nav-link" href="../pages/login.html">Log In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+    <main class="page-shell page-shell-auth">
+        <section class="auth-card">
+            <h2>Log In to Your Account</h2>
+            <p class="auth-copy">Use your email address or username and password to access your CarHouse account. This form is a visual placeholder for now and does not submit to a backend yet.</p>
+            <form class="auth-form" action="./profile.html" data-form-type="login" novalidate>
+                <div id="login-feedback" class="form-feedback is-hidden" role="status" aria-live="polite"></div>
+                <label class="auth-field" for="login-identity">
+                    <span>Email or Username</span>
+                    <input id="login-identity" name="identity" type="text" placeholder="Enter your email or username" autocomplete="username" required>
+                </label>
+                <label class="auth-field" for="login-password">
+                    <span>Password</span>
+                    <input id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" minlength="8" required>
+                </label>
+                <div class="auth-links">
+                    <a href="mailto:info@CarHouse.com?subject=Forgot%20Password">Forgot Password?</a>
+                </div>
+                <div class="cta-row auth-actions">
+                    <button class="page-button alt auth-submit" type="submit">Log In</button>
+                    <a class="page-button" href="./register.html">Register</a>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <hr>
+        <h3>&copy; 2022 CarHouse, Inc.</h3>
+        <h6>Developed by Simphiwe Mtshali</h6>
+    </footer>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/forms.js"></script>
+</body>
+</html>
